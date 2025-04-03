@@ -18,10 +18,11 @@ document.querySelector("#play").addEventListener("click", function() {
  	
 		video.play();
 		console.log("PLAY BUTTON ACTIVATED");
-		document.querySelector("#volume").innerHTML = video.volume;
+		document.querySelector("#volume").innerHTML = (video.volume*100)+ "%";
 	
 
 });
+
 
 document.querySelector("#pause").addEventListener("click", function(){
 
@@ -83,9 +84,10 @@ document.querySelector("#skip").addEventListener("click" , function(){
 document.querySelector("#slider").addEventListener("change" , function(){
 
 	video.volume = document.querySelector("#slider").value * .01;
-	document.querySelector("#volume").innerHTML = video.volume;
+	document.querySelector("#volume").innerHTML = (video.volume * 100) + '%';
 
 })
+
 
 document.querySelector("#vintage").addEventListener("click" , function(){
 
